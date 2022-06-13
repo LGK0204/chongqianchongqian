@@ -1,0 +1,22 @@
+<!--pages/sousuo/sousuo.wxml-->
+<view class="context {{night_mode?'black':''}}">
+  <view class="search_view">
+    <view class="search_view_img">
+      <image class="search_view_img" mode="aspectFit" src="../../images/sousuo.png"></image>
+    </view>
+    <view class="search_view_input">
+      <input type="text" value="{{searchData}}" placeholder="搜索小说" focus="true" confirm-type="search" bindinput="showTextButton" bindblur="hiddenTextButton" bindconfirm="navToXiangxi" />
+    </view>
+    <view wx:if="{{isShow}}" id="textCancleButton" class="search_view_text_button" bindtap="searchCancleButton">取消</view>
+  </view>
+  <view wx:if="{{flag}}">
+    <view class="keyword_title {{night_mode?'title_black':''}}">最近搜索</view>
+    <view class="keyword_context">
+      <view class="keyword_item {{night_mode?'item_black':''}}" wx:for="{{recentSearchTitle}}" wx:for-index="index" wx:key="index" wx:for-item="bookTitle" data-book_title="{{bookTitle}}" bindtap="navToXiangxi_title">{{bookTitle}}</view>
+    </view>
+  </view>
+  <view class="keyword_title {{night_mode?'title_black':''}}">热门搜索</view>
+  <view class="keyword_context">
+    <view class="keyword_item {{night_mode?'item_black':''}}" wx:for="{{recommendSearchTitle}}" wx:for-index="index" wx:key="index" wx:for-item="book" data-book_info="{{book}}" bindtap="recommendToXiangxi">{{book.bname}}</view>
+  </view>
+</view>

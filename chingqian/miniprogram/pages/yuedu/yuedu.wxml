@@ -1,0 +1,4 @@
+<!--pages/yuedu/yuedu.wxml-->
+<view class="read_text {{night_mode?'black':''}}">
+  {{allcontent}}
+</view>

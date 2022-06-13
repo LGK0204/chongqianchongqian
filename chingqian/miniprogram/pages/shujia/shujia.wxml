@@ -1,0 +1,26 @@
+<!--pages/shujia/shujia.wxml-->
+<view class="context {{night_mode?'black':''}}">
+  <view class="info_view">
+    <block wx:if="{{!hasUserInfo}}">
+      <image class="userinfo_avatar" src="../../images/touxiang.png"></image>
+      <text class="userinfo_nickname">请在个人页面登录获取阅读记录</text>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo_avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo_nickname">{{userInfo.nickName}}的书架</text>
+    </block>
+  </view>
+  <scroll-view class="list_view" scroll-y="true" scroll-x="false">
+    <view class="list_line_view">
+      <block wx:if="{{!list_flag}}">
+        <text class="message_info">暂无阅读记录！</text>
+      </block>
+      <block wx:else>
+        <view class="list_item_view" bindtap="navToYuedu" wx:for="{{user_book_list}}" wx:for-item="book" wx:for-index="index" wx:key="index" data-book_info="{{book}}" data-book_name="{{book.bname}}">
+          <image src="{{book['bimg']}}"></image>
+          <view class="item_info_title">{{book['bname']}}</view>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>

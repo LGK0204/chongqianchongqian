@@ -1,0 +1,89 @@
+<!--pages/shucheng/shucheng.wxml-->
+<!-- <swiper>
+  <swiper-item>
+    <image src="../../images/header_photo/header_photo1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/header_photo/header_photo2.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="../../images/header_photo/header_photo3.jpg"></image>
+  </swiper-item>
+</swiper> -->
+<view class="{{night_mode?'black':''}}">
+  <view class="search_view {{night_mode?'black':''}}" bindtap="navToSousuo">
+    <view class="search_view_img">
+      <image class="search_view_img" mode="aspectFit" src="../../images/sousuo.png"></image>
+    </view>
+    <view class="search_view_input">
+      <input type="text" value="{{searchData}}" placeholder="搜索小说" confirm-type="search" />
+    </view>
+  </view>
+  <view class="text_title">分类阅读</view>
+  <view class="type_title_line">
+    <view class="tpye_title_item" bindtap="navToFenlei" wx:for="{{4}}" wx:key="this" wx:for-item="index1" style="background-color: {{typeTitleColor[index1]}};" data-type="{{typeTitleText[index1]}}">{{typeTitleText[index1]}}</view>
+  </view>
+  <view class="type_title_line">
+    <view class="tpye_title_item" bindtap="navToFenlei" wx:for="{{[4,5,6,7]}}" wx:key="this" wx:for-item="index2" style="background-color: {{typeTitleColor[index2]}};" data-type="{{typeTitleText[index2]}}">{{typeTitleText[index2]}}</view>
+  </view>
+  <view class="text_title">热门排行</view>
+  <view class="type_title_view">
+    <view class="mini_text_title {{tab==0?'active':''}}" bindtap="changeSwiperItem" data-item-index="0">日排行</view>
+    <view class="mini_text_title {{tab==1?'active':''}}" bindtap="changeSwiperItem" data-item-index="1">周排行</view>
+    <view class="mini_text_title {{tab==2?'active':''}}" bindtap="changeSwiperItem" data-item-index="2">月排行</view>
+  </view>
+  <swiper class="top_swiper" autoplay="true" interval="5000" circular="true" easing-function="easeInOutCubic" current="{{itemIndex}}" bindchange="changeTab">
+    <swiper-item class="top_swiper_item">
+      <view class="top_list_item" bindtap="navToXiangxi" wx:for="{{day_top_list}}" wx:for-index="index" wx:for-item="book" wx:key="index" data-book_info="{{book}}">
+        <view class="top_list_item_no" style="color: {{topNoColor[index]}};">{{index+1}}</view>
+        <view class="top_list_item_img">
+          <image src="{{book.bimg}}"></image>
+        </view>
+        <view class="top_list_item_text">
+          <view class="top_list_itm_book_name">《{{book.bname}}》</view>
+          <view class="top_list_itm_book_author">作者：{{book.bauthor}}</view>
+          <view class="top_list_itm_book_info">更新日期：{{book.bdate}}</view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item class="top_swiper_item">
+      <view class="top_list_item" bindtap="navToXiangxi" wx:for="{{week_top_list}}" wx:for-index="index" wx:for-item="book" wx:key="index" data-book_info="{{book}}">
+        <view class="top_list_item_no" style="color: {{topNoColor[index]}};">{{index+1}}</view>
+        <view class="top_list_item_img">
+          <image src="{{book.bimg}}"></image>
+        </view>
+        <view class="top_list_item_text">
+          <view class="top_list_itm_book_name">《{{book.bname}}》</view>
+          <view class="top_list_itm_book_author">作者：{{book.bauthor}}</view>
+          <view class="top_list_itm_book_info">更新日期：{{book.bdate}}</view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item class="top_swiper_item">
+      <view class="top_list_item" bindtap="navToXiangxi" wx:for="{{month_top_list}}" wx:for-index="index" wx:for-item="book" wx:key="index" data-book_info="{{book}}">
+        <view class="top_list_item_no" style="color: {{topNoColor[index]}};">{{index+1}}</view>
+        <view class="top_list_item_img">
+          <image src="{{book.bimg}}"></image>
+        </view>
+        <view class="top_list_item_text">
+          <view class="top_list_itm_book_name">《{{book.bname}}》</view>
+          <view class="top_list_itm_book_author">作者：{{book.bauthor}}</view>
+          <view class="top_list_itm_book_info">更新日期：{{book.bdate}}</view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="text_title">猜你喜欢</view>
+  <view class="recommend_book_view" wx:for="{{recommend_book_list}}" wx:key="this" wx:for-item="recommend_book" wx:for-index="recommend_index" style="background-color: {{contrastColor[recommend_index%2]}};" data-recommend_book_name="{{recommend_book.bname}}" data-book_info="{{recommend_book}}" bindtap="navToYuedu">
+    <view class="recommend_book_img">
+      <image src="{{recommend_book.bimg}}"></image>
+    </view>
+    <view class="recommend_book_name">《{{recommend_book.bname}}》</view>
+    <view class="recommend_book_author">{{recommend_book.bauthor}}</view>
+    <view class="recommend_book_info">{{recommend_book.binfo}}</view>
+    <!-- <view class="recommend_book_button_view">
+    <view class="recommend_book_button_dislike">不感兴趣</view>
+    <view class="recommend_book_button_like">加入书架</view>
+  </view> -->
+  </view>
+</view>

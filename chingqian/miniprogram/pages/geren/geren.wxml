@@ -1,0 +1,73 @@
+<!--pages/geren/geren.wxml-->
+<view class="context {{night_mode?'black':''}}">
+    <block wx:if="{{!hasUserInfo}}">
+      <view class="login_view">
+        <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" type="primary"> 登录 </button>
+        <view class="icon_view">
+          <view class="icon_img">
+            <icon class="icon_small" type="info_circle" size="46rpx"></icon>
+          </view>
+          <view class="icon_text">
+            请先登录！
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <view class="personal_info">
+        <view class="img_info">
+          <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        </view>
+        <view class="name_info">
+          <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+          <view class="lv_text">Lv.{{lv_title}}</view>
+        </view>
+        <view class="progress_info">
+          <view class="lv_progress">
+            <progress percent="{{lv_info}}" activeColor="#00c16e" active stroke-width="10" border-radius="10" backgroundColor="#FFFFFF" />
+          </view>
+        </view>
+      </view>
+      <!-- <view class="message_view">
+        <view class="message_item" style="border-right: 2rpx solid black;">获赞：1234</view>
+        <view class="message_item" style="border-right: 2rpx solid black;">阅读：1234</view>
+        <view class="message_item">评论：1234</view>
+      </view> -->
+      <view class="login_time_view">
+        <view>上次登录时间:{{lastLoginTime}}</view>
+        <view>本次登录时间:{{nowLoginTime}}</view>
+      </view>
+      <view class="setting_view_list">
+        <view class="setting_view_item">
+          <view class="setting_view_item_text">夜间模式</view>
+          <switch bindchange="changeNightMode"></switch>
+        </view>
+      </view>
+      <!-- <view class="info_list"> -->
+      <!-- <view class="info_list_item">
+          <view class="info_list_img">
+            <image src="../../images/lianxi.png"></image>
+          </view>
+          <view class="info_list_text">
+            粉丝
+          </view>
+        </view> -->
+      <!-- <view class="info_list_item">
+          <view class="info_list_img">
+            <image src="../../images/lianxi.png"></image>
+          </view>
+          <view class="info_list_text">
+            联系作者
+          </view>
+        </view> -->
+      <!-- <view class="info_list_item">
+          <view class="info_list_img">
+            <image src="../../images/lianxi.png"></image>
+          </view>
+          <view class="info_list_text">
+            意见反馈
+          </view>
+        </view> -->
+      <!-- </view> -->
+    </block>
+</view>

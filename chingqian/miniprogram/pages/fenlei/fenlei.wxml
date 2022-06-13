@@ -1,0 +1,12 @@
+<!--pages/fenlei/fenlei.wxml-->
+<view class="{{night_mode?'black':''}}">
+  <view class="text_title {{night_mode?'title_black':''}}">{{type_title}}</view>
+  <view class="list_view">
+    <view class="list_line_view">
+      <view class="list_item_view" wx:for="{{book_list}}" wx:for-item="book" wx:for-index="index" wx:key="index" data-book_info="{{book}}" bindtap="navToXiangxi">
+        <image src="{{book['bimg']}}" data-img="{{book['bimg']}}" binderror="imageError"></image>
+        <view class="item_info_title">{{book['bname']}}</view>
+      </view>
+    </view>
+  </view>
+</view>

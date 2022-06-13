@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/shucheng/shucheng",
+    "pages/yuedu/yuedu",
+    "pages/fenlei/fenlei",
+    "pages/xiangxi/xiangxi",
+    "pages/shujia/shujia",
+    "pages/geren/geren",
+    "pages/sousuo/sousuo"
+  ],
+  "window": {
+    "backgroundColor": "#FFFFFF",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "navigationBarTitleText": "虫前虫前",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "iconPath": "images/shucheng.png",
+        "selectedIconPath": "images/shucheng.png",
+        "pagePath": "pages/shucheng/shucheng",
+        "text": "书城"
+      },
+      {
+        "iconPath": "images/shujia.png",
+        "selectedIconPath": "images/shujia.png",
+        "pagePath": "pages/shujia/shujia",
+        "text": "书架"
+      },
+      {
+        "iconPath": "images/geren.png",
+        "selectedIconPath": "images/geren.png",
+        "pagePath": "pages/geren/geren",
+        "text": "个人"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

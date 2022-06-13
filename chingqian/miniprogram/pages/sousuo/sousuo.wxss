@@ -1,0 +1,38 @@
+/* pages/sousuo/sousuo.wxss */
+page{
+  height: 100%;
+}
+.context{
+  height: 100%;
+}
+
+.keyword_title{
+  margin: 10rpx;
+  width: 150rpx;
+  font-size: 35rpx;
+  padding:0 20rpx;
+  border-left:10rpx solid #f85a40;
+  border-radius: 10rpx;
+  background-color: #fefefe;
+
+}
+.title_black{
+  background: black;
+}
+
+.keyword_context{
+  margin: 10rpx;
+  display: flex;
+  flex-flow: wrap;
+}
+.keyword_item{
+  margin: 10rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+  background-color: #fefefe;
+  white-space: nowrap;
+}
+
+.item_black{
+  background: #797979;
+}

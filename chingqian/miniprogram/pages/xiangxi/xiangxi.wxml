@@ -1,0 +1,25 @@
+<!--pages/xiangxi/xiangxi.wxml-->
+<view class="context {{night_mode?'black':''}}">
+  <view class="book_image">
+    <image src="{{book_info['bimg']}}" alt="加载超时"></image>
+  </view>
+  <view class="book_message">
+    <view class="book_name">{{book_info['bname']}}</view>
+    <view class="table_tr">
+      <view class="table_th">作<view class="w_2em"></view>者:</view>
+      <view class="table_td">{{book_info['bauthor']}}</view>
+    </view>
+    <view class="table_tr">
+      <view class="table_th">更新日期:</view>
+      <view class="table_td">{{book_info['bdate']}}</view>
+    </view>
+    <view class="info_tr">
+      <view class="info_th">简介:</view>
+      <view class="info_td">{{book_info['binfo']}}</view>
+    </view>
+  </view>
+  <view class="book_button" bindtap="navToYuedu">
+    <view>开始阅读</view>
+    <!-- <view>继续阅读</view> -->
+  </view>
+</view>

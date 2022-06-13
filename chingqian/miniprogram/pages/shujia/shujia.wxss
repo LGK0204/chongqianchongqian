@@ -1,0 +1,69 @@
+/* pages/shujia/shujia.wxss */
+page{
+  height: 100%;
+}
+.context{
+  height: 100%;
+}
+.info_view {
+  display: flex;
+  margin: 10rpx;
+  padding: 10rpx;
+  border: 2rpx solid #3f72af;
+  border-radius: 20rpx;
+  box-shadow: 4rpx 4rpx 4rpx #797979;
+}
+
+.userinfo_avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+}
+
+.userinfo_nickname {
+  line-height: 100rpx;
+  margin-left: 20rpx;
+}
+
+.list_view {
+  height: 1100rpx;
+  width: 730rpx;
+  margin: 10rpx;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+  border: 2rpx solid #3f72af;
+  border-radius: 20rpx;
+  box-shadow: 4rpx 4rpx 4rpx #797979;
+}
+
+.list_line_view {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+
+.list_item_view {
+  width: 200rpx;
+  margin-top: 30rpx;
+  margin-left: 34rpx;
+  border-bottom: 2rpx solid #797979;
+}
+
+.list_item_view image {
+  width: 200rpx;
+  height: 280rpx;
+  border-radius: 15rpx;
+  box-shadow: 4rpx 4rpx 4rpx #797979;
+}
+
+.item_info_title {
+  font-size: 25rpx;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.message_info{
+  margin:300rpx auto;
+}

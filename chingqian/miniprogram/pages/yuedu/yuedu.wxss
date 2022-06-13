@@ -1,0 +1,6 @@
+/* pages/yuedu/yuedu.wxss */
+.read_text{
+  white-space:pre-line;
+  padding: 20rpx;
+  min-height: 2000rpx;
+}

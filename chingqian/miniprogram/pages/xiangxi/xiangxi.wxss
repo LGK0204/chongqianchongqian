@@ -1,0 +1,96 @@
+/* pages/xiangxi/xiangxi.wxss */
+.w_2em {
+  width: 2em;
+}
+
+page{
+  height: 100%;
+}
+.context{
+  height: 100%;
+}
+
+.book_image {
+  margin: 10rpx auto;
+  width: 670rpx;
+  text-align: center;
+  /* border: 2rpx solid red; */
+  border-radius: 60rpx;
+  padding: 20rpx;
+}
+
+.book_image image {
+  width: 400rpx;
+  height: 500rpx;
+  border-radius: 30rpx;
+  box-shadow: 10rpx 10rpx 10rpx #797979;
+}
+
+.book_message {
+  margin: 10rpx 20rpx;
+  text-align: left;
+  font-size: large;
+  border: 2rpx solid #3f72af;
+  border-radius: 60rpx;
+  box-shadow: 4rpx 4rpx 4rpx #797979;
+}
+
+.book_name {
+  text-align: center;
+  font-size: larger;
+  margin: 10rpx;
+  text-shadow: 2rpx 2rpx 2rpx #797979;
+}
+
+.table_tr {
+  display: flex;
+  padding: 0 40rpx;
+}
+
+.table_th {
+  width: 5em;
+  display: flex;
+  text-align: right;
+}
+
+.table_td {
+  width: 8em;
+  text-align: left;
+}
+
+.info_tr {
+  padding: 0 40rpx;
+}
+
+.info_th {
+  width: 5em;
+  margin-top: 1em;
+}
+
+.info_td {
+  text-indent: 2em;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  margin-bottom: 10rpx;
+  /* font-size: 18rpx; */
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 10;
+}
+
+.book_button {
+  margin: 20rpx;
+  text-align: center;
+  border: 2rpx solid #3f72af;
+  background-color: #60D7FF;
+  /* width: 22em; */
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 30rpx;
+  box-shadow: 4rpx 4rpx 4rpx #797979;
+}
+
+.book_button:active {
+  box-shadow: 2rpx 2rpx 2rpx #797979;
+}
